@@ -11,21 +11,60 @@
 <div class="hero">
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home" onclick="show('home')">Home</a></li>
+            <li><a href="#about" onclick="show('about')">About</a></li>
+            <li><a href="#portfolio" onclick="show('portfolio')">Portfolio</a></li>
+            <li><a href="#blog" onclick="show('blog')">Blog</a></li>
+            <li><a href="#contact" onclick="show('contact')">Contact</a></li>
         </ul>
     </nav>
 
-    <div class="content">
+    <div class="content" id="home">
         <span class="title">Computer Science Student</span>
         <h1>Hello, I’m <span>Daniel</span></h1>
         <p>I am a computer science student at Technical University of Munich</p>
         <a href="/files/daniel_pfeifer_cv.pdf" download class="btn">Download CV</a> <!-- TODO -->
     </div>
+
+    <div class="content" id="about" style="display: none">
+        <span class="title">About</span>
+        <h1>TODO...</h1>
+        <p>TODO...</p>
+    </div>
+
+    <div class="content" id="portfolio" style="display: none">
+        <span class="title">Portfolio</span>
+        <h1>TODO...</h1>
+        <p>TODO...</p>
+    </div>
+
+    <div class="content" id="blog" style="display: none">
+        <span class="title">Blog</span>
+        <h1>TODO...</h1>
+        <p>TODO...</p>
+    </div>
+
+    <div class="content" id="contact" style="display: none">
+        <span class="title">Contact</span>
+        <h1>TODO...</h1>
+        <p>TODO...</p>
+    </div>
 </div>
+
+<script>
+    function show(s) {
+
+        const ids = ["home", "about", "portfolio", "blog", "contact"];
+
+        ids.forEach(function(s) {
+            var n = document.getElementById(s);
+            n.style.display = "none";
+        })
+
+        var chosen = document.getElementById(s);
+        chosen.style.display = "block";
+    }
+</script>
 
 </body>
 </html>
