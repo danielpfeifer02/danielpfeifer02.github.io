@@ -7,6 +7,7 @@
     <!----CSS link----->
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/w3.css">
+    <link rel="stylesheet" href="/css/cf.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
@@ -15,7 +16,12 @@
 </head>
 <body class="w3-light-grey">
 
+<div class="topbar" id="topbar">
+
+</div>
+
 <div class="hero" id="main">
+
     <nav>
         <ul>
             <li><a href="#home" onclick="show('home')">Home</a></li>
@@ -153,10 +159,44 @@
         <p>TODO...</p>
     </div>
 
-    <div class="content" id="contact" style="display: none">
-        <span class="title">Contact</span>
-        <h1>TODO...</h1>
-        <p>TODO...</p>
+    <div class="content" id="contact" style="top: 20%; left: 10%; right: 40%; display: none">
+        <div class="fcf-body">
+
+            <div id="fcf-form">
+                <h3 class="fcf-h3">Contact me!</h3>
+
+                <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+
+                    <div class="fcf-form-group">
+                        <label for="Name" class="fcf-label">Your name</label>
+                        <div class="fcf-input-group">
+                            <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="fcf-form-group">
+                        <label for="Email" class="fcf-label">Your email address</label>
+                        <div class="fcf-input-group">
+                            <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="fcf-form-group">
+                        <label for="Message" class="fcf-label">Your message</label>
+                        <div class="fcf-input-group">
+                            <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="fcf-form-group">
+                        <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+                    </div>
+
+
+                </form>
+            </div>
+
+        </div>
     </div>
 </div>
 
@@ -170,14 +210,16 @@
             n.style.display = "none";
         })
 
-        var chosen = document.getElementById(s);
-        chosen.style.display = "block";
         setTimeout(function () { //TODO why is the page not on top??
             window.scrollTo({
                 top: 0,
                 left: 0,
                 behaviour: 'smooth'});
         },1)
+
+        var chosen = document.getElementById(s);
+        chosen.style.display = "block";
+
     }
 </script>
 
