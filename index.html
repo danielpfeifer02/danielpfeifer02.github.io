@@ -1,235 +1,742 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Personal Portfolio Website</title>
-    <!----CSS link----->
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/w3.css">
-    <link rel="stylesheet" href="/css/cf.css">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vCard - Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<body class="w3-light-grey">
 
-<div class="topbar" id="topbar">
+<body>
 
-</div>
+  <!--
+    - #MAIN
+  -->
 
-<div class="hero" id="main">
+  <main>
 
-    <nav>
-        <ul>
-            <li><a href="#home" onclick="show('home')">Home</a></li>
-            <li><a href="#about" onclick="show('about')">About</a></li>
-            <li><a href="#portfolio" onclick="show('portfolio')">Portfolio</a></li>
-            <li><a href="#blog" onclick="show('blog')">Blog</a></li>
-            <li><a href="#contact" onclick="show('contact')">Contact</a></li>
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar-round.png" alt="Daniel Alexander Antonius Pfeifer" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Daniel Alexander Antonius Pfeifer">Daniel Alexander Antonius Pfeifer</h1>
+
+          <p class="title">Computer Science Student</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:pfeifer.daniel2302@gmail.com" class="contact-link">pfeifer.daniel2302@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+436763908703" class="contact-link">+43 676 3908703</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2002-02-23">February 23, 2002</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Munich, Bavaria, Germany</address>
+            </div>
+
+          </li>
+
         </ul>
-    </nav>
 
-    <div class="content" id="home">
-        <span class="title">Computer Science Student</span>
-        <h1>Hello, I’m <span>Daniel</span></h1>
-        <p>I am a computer science student at Technical University of Munich</p>
-        <a href="/files/daniel_pfeifer_cv.pdf" download class="btn">Download CV</a> <!-- TODO -->
-    </div>
+        <div class="separator"></div>
 
-    <div class="content" id="about" style="top: 10%; display: none">
-        <div>
-            <div class="w3-content w3-margin-top" style="max-width:1400px;">
+        <ul class="social-list">
 
-                <!-- The Grid -->
-                <div class="w3-row-padding">
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/daniel-pfeifer-ab831b1b0/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
 
-                    <!-- Left Column -->
-                    <div class="w3-third">
+        </ul>
 
-                        <div class="w3-white w3-text-grey w3-card-4">
-                            <div class="w3-display-container">
-                                <img src="/img/white.jpg" style="width:100%" alt="Avatar">
-                                <div class="w3-display-bottomleft w3-container w3-text-black">
-                                    <h2>Daniel Alexander Antonius Pfeifer</h2>
-                                </div>
-                            </div>
+      </div>
 
-                            <div class="w3-container">
-                                <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>BSc. Computer Science</p>
-                                <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Munich, GER</p>
-                                <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>daniel.pfeifer@tum.de</p>
-                                <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+43 676 3908703</p>
-                                <a><i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="https://www.linkedin.com/in/daniel-pfeifer-ab831b1b0/">LinkedIn</a></p>
-                                <hr>
+    </aside>
 
-                                <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-                                <p>Java</p>
-                                <div class="w3-light-grey w3-round-xlarge w3-small">
-                                    <div class="w3-round-xlarge w3-teal" style="height:18px;width:90%"></div>
-                                </div>
-                                <p>C</p>
-                                <div class="w3-light-grey w3-round-xlarge w3-small">
-                                    <div class="w3-round-xlarge w3-teal" style="height:18px;width:75%"></div>
-                                </div>
-                                <p>C++</p>
-                                <div class="w3-light-grey w3-round-xlarge w3-small">
-                                    <div class="w3-round-xlarge w3-teal" style="height:18px;width:70%"></div>
-                                </div>
-                                <p>OCaml</p>
-                                <div class="w3-light-grey w3-round-xlarge w3-small">
-                                    <div class="w3-round-xlarge w3-teal" style="height:18px;width:50%"></div>
-                                </div>
-                                <p>Python</p>
-                                <div class="w3-light-grey w3-round-xlarge w3-small">
-                                    <div class="w3-round-xlarge w3-teal" style="height:18px;width:50%"></div>
-                                </div>
-                                <br>
 
-                                <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
-                                <p>German</p>
-                                <div class="w3-light-grey w3-round-xlarge">
-                                    <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
-                                </div>
-                                <p>English</p>
-                                <div class="w3-light-grey w3-round-xlarge">
-                                    <div class="w3-round-xlarge w3-teal" style="height:24px;width:90%"></div>
-                                </div>
-                                <p>French</p>
-                                <div class="w3-light-grey w3-round-xlarge">
-                                    <div class="w3-round-xlarge w3-teal" style="height:24px;width:25%"></div>
-                                </div>
-                                <br>
-                            </div>
-                        </div><br>
+    <!--
+      - #main-content
+    -->
 
-                        <!-- End Left Column -->
-                    </div>
+    <div class="main-content">
 
-                    <!-- Right Column -->
-                    <div class="w3-twothird">
+      <!--
+        - #NAVBAR
+      -->
 
-                        <div class="w3-container w3-card w3-white w3-margin-bottom">
-                            <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
-                            <div class="w3-container">
-                                <h5 class="w3-opacity"><b>Tutor on discrete mathematics / Technical University of Munich</b></h5>
-                                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2022 - <span class="w3-tag w3-teal w3-round">Today</span></h6>
-                                <p></p>
-                                <hr>
-                            </div>
-                            <div class="w3-container">
-                                <h5 class="w3-opacity"><b>Software Engineer Internship / Allgemeines Rechenzentrum ARZ Innsburck</b></h5>
-                                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sept 2022 - Sept 2022</h6>
-                                <p></p>
-                                <hr>
-                            </div>
-                        </div>
+      <nav class="navbar">
 
-                        <div class="w3-container w3-card w3-white">
-                            <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
-                            <div class="w3-container">
-                                <h5 class="w3-opacity"><b>Technical University of Munich</b></h5>
-                                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021 - <span class="w3-tag w3-teal w3-round">Today</span></h6>
-                                <p>Bachelors Degree</p>
-                                <hr>
-                            </div>
-                            <div class="w3-container">
-                                <h5 class="w3-opacity"><b>Bischöfliches Gymnasium Paulinum Schwaz</b></h5>
-                                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2011 - 2020</h6>
-                                <p>A-Levels</p><br>
-                            </div>
-                        </div>
+        <ul class="navbar-list">
 
-                        <!-- End Right Column -->
-                    </div>
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
 
-                    <!-- End Grid -->
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            TODO
+          </p>
+
+          <p>
+            TODO
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Photography</h4>
+
+                <p class="service-item-text">
+                  I make high-quality photos of any category at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">University school of the arts</h4>
+
+              <span>2007 — 2008</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">New york academy of art</h4>
+
+              <span>2006 — 2007</span>
+
+              <p class="timeline-text">
+                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
+                omnis..
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">High school of art and design</h4>
+
+              <span>2002 — 2004</span>
+
+              <p class="timeline-text">
+                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
+                magni dolores
+                eos.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Creative director</h4>
+
+              <span>2015 — Present</span>
+
+              <p class="timeline-text">
+                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
+                molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Art director</h4>
+
+              <span>2013 — 2015</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Web designer</h4>
+
+              <span>2010 — 2013</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web design</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Graphic design</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Branding</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">WordPress</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+
+                  <p class="blog-text">
+                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                  </p>
+
                 </div>
 
-                <!-- End Page Container -->
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+
+                  <p class="blog-text">
+                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                  <p class="blog-text">
+                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+
+                  <p class="blog-text">
+                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+
+                  <p class="blog-text">
+                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                  <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://maps.google.com/maps?q=Garching&t=&z=11&ie=UTF8&iwloc=&output=embed"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
             </div>
-        </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
     </div>
 
-    <div class="content" id="portfolio" style="display: none">
-        <span class="title">Portfolio</span>
-        <h2>Work in progress...</h2>
-        <p></p>
-    </div>
-
-    <div class="content" id="blog" style="display: none">
-        <span class="title">Blog</span>
-        <h2>Work in progress...</h2>
-        <p></p>
-    </div>
-
-    <div class="content" id="contact" style="top: 20%; left: 10%; right: 40%; display: none">
-        <div class="fcf-body">
-
-            <div id="fcf-form">
-                <h3 class="fcf-h3">Contact me!</h3>
-
-                <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
-
-                    <div class="fcf-form-group">
-                        <label for="Name" class="fcf-label">Your name</label>
-                        <div class="fcf-input-group">
-                            <input type="text" id="Name" name="Name" class="fcf-form-control" required>
-                        </div>
-                    </div>
-
-                    <div class="fcf-form-group">
-                        <label for="Email" class="fcf-label">Your email address</label>
-                        <div class="fcf-input-group">
-                            <input type="email" id="Email" name="Email" class="fcf-form-control" required>
-                        </div>
-                    </div>
-
-                    <div class="fcf-form-group">
-                        <label for="Message" class="fcf-label">Your message</label>
-                        <div class="fcf-input-group">
-                            <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
-                        </div>
-                    </div>
-
-                    <div class="fcf-form-group">
-                        <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
-                    </div>
+  </main>
 
 
-                </form>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<script>
-    function show(s) {
-
-        const ids = ["home", "about", "portfolio", "blog", "contact"];
-
-        ids.forEach(function(s) {
-            var n = document.getElementById(s);
-            n.style.display = "none";
-        })
 
 
-        setTimeout(function () { //TODO why is the page not on top??
-            window.scrollTo({
-                top: 0,
-                left: 0,
-                behaviour: 'smooth'});
-        },1)
 
 
-        var chosen = document.getElementById(s);
-        chosen.style.display = "block";
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
 
-    }
-</script>
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
+
 </html>
